@@ -265,6 +265,8 @@ token = padding(token,max_len)
 batch = buat_batch(token)
 batch_size = len(batch[0])
 
+print("ayam")
+
 
 
 
