@@ -268,42 +268,11 @@ batch_size = len(batch[0])
 
 
 
-def embedding_matriks(vocab, d):
-    embedding = np.array(np.random.randn(len(vocab), d))
-    return embedding
-
-e_matriks = embedding_matriks(vocab, d)
-
-def word_embedding(batch, e_matriks):
-    embedding_matriks = e_matriks[batch[0]]
-    return embedding_matriks 
-
-embedding = word_embedding(batch, e_matriks)
-
-norm = RMSnorm(embedding)
-print(norm)
-
-rope
 
 
 
-def GMHSA(x,d, num_head = 4, head_dim = 8, num_group = 2):
-    wq = np.random.randn(d,d)
-    wk = np.random.rand(d,d)
-    wv = np.random.rand(d,d)
 
-    Q = x @ wq.T 
-    K = x @ wk.T
-    V = x @ wv.T
 
-    Q = Q.reshape(10,36,2,4,8).transpose(0,2,1,3,4)
-    K = K.reshape(10,36,2,4,8).transpose(0,2,1,3,4)
-    V = V.reshape(10,36,2,4,8).transpose(0,2,1,3,4)
-    
-    Q = rope(Q, dims= 2)
-    K = rope(K,dims= 2 )
-
-    score =
 
 
 
