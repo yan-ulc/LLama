@@ -364,6 +364,18 @@ class BPETokenizer:
         if not self.is_trained:
             raise ValueError("Tokenizer belum di-training!")
         
+        token_freq = {}
+        for token_id in self.vocab_index:
+            token = self.vocab_index[token_id]
+            token_freq[token] = 0
+
+        for merge in self.merge_operations:
+            merged_token = merge[0] + merge[1]
+            if merged_token in token_freq:
+                token_freq[merged_token] += 1
+            else:
+                token_freq[merged_token] = 1
+        
         # Return vocab yang sudah terurut berdasarkan frekuensi
         return dict(sorted(self.vocab.items(), key=lambda x: x[1]))
     
