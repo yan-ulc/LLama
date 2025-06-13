@@ -1,0 +1,13 @@
+  {
+    "dim": 256,
+    "vocab_size" : 9540,
+    "n_layers": 4,
+    "n_heads": 4,
+    "n_kv_heads": 2,
+    "hidden_dim": 768,
+    "max_seq_len": 128,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.01,
+    "batch_size": 32,
+    "num_epochs": 5
+  }
