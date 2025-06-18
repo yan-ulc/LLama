@@ -254,7 +254,7 @@ texts = data["Clean"].tolist()
 labels =  data["Sentiment"].tolist()
 corpus = []
 for text in texts:
-    words = text.split()
+    words = text.split()    x
     corpus.append(words)
 
 vocab_index = tokenizer(corpus)
