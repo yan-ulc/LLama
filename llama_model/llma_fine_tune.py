@@ -126,7 +126,7 @@ def generate_text_for_eval(model, tokenizer, prompt_text, device):
 
 
 # ----------------------------------------------------------------------------
-# FUNGSI EVALUASI YANG DIPERBARUI
+# FUNGSI EVALUASI
 # ----------------------------------------------------------------------------
 def evaluate(model, dataloader, loss_function, tokenizer, device):
     logger.info("Memulai evaluasi...")
